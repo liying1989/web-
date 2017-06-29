@@ -1,0 +1,4 @@
+html #layui_layer_skinyourskinstylecss{display:none; position: absolute; width:1989px;}
+body .layer-ext-yourskin .layui-layer-title{background:#c00; color:#fff; border: none;}
+body .layui-ext-yourskin .layui-layer-btn{border-top:1px solid #E9E7E7;background: red}
+body .layui-ext-yourskin .layui-layer-btn a{background:red;}

@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html>
+
+<heaD>
+
+    <meta charset="UTF-8">
+
+    <title>侧边栏</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="CSS/style.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</heaD>
+
+<body>
+
+<!--<!DOCTYPE html><html class="menu">-->
+<!--<html>-->
+
+<!--<head>-->
+
+    <!--<meta charset="utf-8"/>-->
+    <!--<meta http-equiv="X-UA-Compatible" content=="IE=edge"/>-->
+    <!--<meta name="google" value="notranslate"/>-->
+    <!--<title>Side Menu</title>-->
+
+    <!--<link rel="stylesheet" type="text/css" href="css/menu.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">-->
+
+<!--</head>-->
+<!--<body>-->
+
+<nav class="main-menu"  id="slideMenu">
+
+    <div class="logo"></div>
+    <div class="settings"></div>
+
+    <ul>
+        <li onclick="changeSlideWight()">
+            <i class="fa fa-bars fa-lg"></i>
+        </li>
+        <li>
+            <a >
+                <i class="fa fa-plane fa-lg"></i>
+                <span class="nav-text">机型管理</span>
+
+            </a>
+        </li>
+        <li>
+            <a >
+                <i class="fa fa-binoculars fa-lg"></i>
+                <span class="nav-text">机架管理</span>
+            </a>
+        </li>
+        <li>
+            <a >
+                <i class="fa fa-slack fa-lg"></i>
+                <span class="nav-text">厂家管理</span>
+
+            </a>
+        </li>
+
+        <li>
+            <a >
+                <i class="fa fa-black-tie fa-lg"></i>
+                <span class="nav-text">飞控管理</span>
+
+            </a>
+        </li>
+
+        <li>
+            <a >
+                <i class="fa fa-envira fa-lg"></i>
+                <span class="nav-text">无人机信息</span>
+
+            </a>
+        </li>
+        <li>
+            <a>
+                <i class="fa fa-font-awesome fa-lg"></i>
+                <span class="nav-text">航线管理</span>
+            </a>
+        </li>
+        <li>
+            <a  href="#checkModal" data-toggle="collapse">
+                <i class="fa fa-slack fa-lg"></i>
+                <span class="nav-text">检查模板</span>
+            </a>
+            <ul id="checkModal" class="nav nav-list collapse in">
+                <li>
+                    <a href="#menufactory" data-toggle="collapse" >
+                        <i class="fa"></i>
+                        <span class="nav-sub-text">飞控</span>
+                    </a>
+                    <ul id="menufactory" class="collapse">
+                        <li>
+                            <a >
+                                <i class="fa"></i>
+                                <span class="nav-thr-text">APM</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a >
+                                <i class="fa"></i>
+                                <span class="nav-thr-text">自研</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#airplanFrame" data-toggle="collapse" >
+                        <i class="fa"></i>
+                        <span class="nav-sub-text">机架</span>
+                    </a>
+                    <ul id="airplanFrame" class="collapse">
+                        <li>
+                            <a  href="">
+                                <i class="fa"></i>
+                                 <span class="nav-thr-text">小Y</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a  >
+                                <i class="fa"></i>
+                                <span class="nav-thr-text">2/3Y</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+
+
+
+    </ul>
+</nav>
+<script>
+    var islock = false;
+    function changeSlideWight()
+    {
+        if(!islock)
+        {
+            islock = true;
+            var slideMenu = document.getElementById("slideMenu");
+            slideMenu.style.width = '55px';
+            //$("#slideMenu").off('mousemove',displyMenu());
+            //$("#slideMenu").off('mouseout',hiddenMenu());
+        }
+        else
+        {
+            islock = false;
+            var slideMenu = document.getElementById("slideMenu");
+            slideMenu.style.width = '250px';
+            //$("#slideMenu").on('mousemove',displyMenu());
+            //$("#slideMenu").on('mouseout',hiddenMenu());
+        }
+        //var slideMenu = document.getElementById("slideMenu");
+        //if(slideMenu.offsetWidth <250)
+        //{
+        //    slideMenu.width = '250px';
+        //
+        //}
+        //else
+        //{
+        //    slideMenu.width = '55px';
+        //
+        //}
+    }
+</script>
+<!--<div style="text-align:center;clear:both">-->
+    <!--<script src="/follow.js" type="text/javascript"></script>-->
+<!--</div>-->
+</body>
+</html>
+

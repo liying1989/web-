@@ -1,0 +1,60 @@
+table .a-group a{
+    font-size:12px;
+    margin: 6px;
+}
+.ui-jqgrid tr.jqgrow td{
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+}
+.jqGrid_wrapper .ui-jqgrid{
+    border: 1px solid #ccc;
+}
+.ui-jqgrid .ui-jqgrid-htable th div,.ui-jqgrid .ui-jqgrid-pager{
+    height: 30px;
+    line-height: 28px;
+    text-align: center;
+}
+/*表头*/
+.ui-jqgrid-hdiv .ui-jqgrid-htable{
+    border: 1px solid #ccc;
+    border-top-width: 0px;
+}
+.ui-jqgrid-hdiv .ui-jqgrid-htable th{
+    border-right: 1px solid #ccc;
+    background-color: #F5F5F6;
+}
+
+/*表体*/
+.ui-state-hover,.ui-state-highlight{
+    background-color: #dff0d8;
+}
+.ui-state-disabled{
+    opacity: 0.35;
+}
+/*表脚*/
+.jqGrid_wrapper .ui-pg-table{
+    border-top: 1px solid #ccc;
+    border-right-width: 0px;
+}
+#pager_list_jdOrder_center .ui-pg-table{
+    border-top-width: 0px;
+}
+
+#page-wrapper {
+    padding: 0 15px;
+    position: absolute;
+    margin: 0 0 0 220px;
+    top: 60px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+#wrapper .row::after{
+    content: "";
+    clean:both;
+}
+html,body{
+    overflow: hidden;
+}
+

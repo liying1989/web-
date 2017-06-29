@@ -1,0 +1,74 @@
+/*map*/
+#googleMap{
+    position: static !important;
+}
+
+.realTimeTrackPanel{
+    height:96px;
+    width:330px;
+    right:20px;
+    top: 60px;
+    position: absolute;
+    z-index: 3;
+    background: rgba(51, 51, 51, 0.6) !important;
+    border:none !important;
+}
+.user-btn
+{
+    background-color: rgba(51, 51, 51, 0.6) !important;
+    color: rgb(255,255,255) !important;
+    border:black 1px !important;
+    font-size: 16px !important;
+    margin: 0;
+    height: 48px;
+    width: 165px;
+    position: static;
+    float: left;
+    top: 0;
+}
+.user-btn:hover{
+    background-color: black !important;
+}
+
+/*layer层颜色变化*/
+.layui-layer{
+    border-radius:2px;
+    background-color:rgba(0,0,0,0.3) !important;
+}
+
+/*fjding*/
+.layui-layer-title{
+    background:rgba(38,38,38,0.7) !important;
+    color:#fff !important;
+    border-bottom-color:rgba(255,255,255,0.1) !important;
+}
+.layui-layer .layui-layer-setwin .layui-layer-ico:hover {
+    background: url("../js/layer/skin/default/icon.png") no-repeat;
+    background-position: 1px -37px;
+    height: 16px;
+    width: 16px;
+}
+.planeInfoPanelDiv{
+    line-height: 25px;
+    margin-left: 70px;
+}
+/*fjding表单中每一条目名设置*/
+.form-label-addPanel{
+    color:rgb(219,219,219) !important;
+    font-size:14px;
+    font-weight:normal !important;
+    font-family:"Microsoft YaHei" !important;
+}
+/*表单中每一条目数字显示*/
+.form-p-addPanel
+{
+    width:30px;
+    color:rgb(255,255,255) !important;
+    font-size:14px;
+    font-weight:normal !important;
+    font-family:"Microsoft YaHei" !important;
+    /*下面三一定要连着使用*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

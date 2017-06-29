@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>地图</title>
+    <link href="css/map.css" rel="stylesheet">
+    <link href="js/layer/skin/layer.css"  rel="stylesheet">
+</head>
+<body>
+
+<div id="googleMap" class="map">
+</div>
+<!--右上按钮-->
+<div class="realTimeTrackPanel">
+    <button class="user-btn">实时轨迹</button>
+    <button class="user-btn" onclick="showLeftInfo()">飞行信息</button>
+    <button class="user-btn">开启航线</button>
+    <button class="user-btn">地图切换</button>
+</div>
+
+<!--飞机详细信息-->
+<div id="planeInfo">
+    <button onclick="toggleDiv()">按钮</button>
+    <div id="planeInfoPanel" class="detailInfoPanel" >
+
+        <div class="planeInfoPanelDiv"><span class="form-label-addPanel">飞机编号：</span>
+            <span id="airplaneCode" class="form-p-addPanel"></span>
+        </div>
+
+        <div class="planeInfoPanelDiv" style="display:none;">
+            <span class="form-label-addPanel">飞机名称：</span>
+            <span id="airplaneName" class="form-p-addPanel"></span>
+        </div>
+
+        <div class="planeInfoPanelDiv">
+            <span class="form-label-addPanel">飞行航线：</span>
+            <span id="routeName" class="form-p-addPanel"></span>
+        </div>
+
+        <div class="planeInfoPanelDiv">
+            <span class="form-label-addPanel">&nbsp;载&nbsp;重&nbsp;量：</span>
+            <span id="maxLoad" class="form-p-addPanel"></span>
+        </div>
+
+        <div class="planeInfoPanelDiv">
+            <span class="form-label-addPanel">飞行状态：</span>
+            <span id="flyStatus" class="form-p-addPanel"></span>
+        </div>
+
+        <div class="planeInfoPanelDiv">
+            <span class="form-label-addPanel">返航标识：</span>
+            <span id="returnFlag" class="form-p-addPanel"></span>
+        </div>
+
+        <div class="planeInfoPanelDiv">
+            <span class="form-label-addPanel">&nbsp;GPS质量：</span>
+            <span id="gpsNum" class="form-p-addPanel"></span>
+        </div>
+
+        <div class="planeInfoPanelDiv" style="display: none;">
+            <span class="form-label-addPanel">电池电压：</span>
+            <span id="voltageBattery" class="form-p-addPanel"></span>
+        </div>
+
+        <div class="planeInfoPanelDiv">
+            <span class="form-label-addPanel">飞机高度：</span>
+            <span id="relativeAltitude" class="form-p-addPanel"></span>
+        </div>
+
+        <div class="planeInfoPanelDiv">
+            <span class="form-label-addPanel">飞行速度：</span>
+            <span id="groundspeed" class="form-p-addPanel"></span>
+        </div>
+
+        <div class="planeInfoPanelDiv">
+            <span class="form-label-addPanel">剩余时间：</span>
+            <span id="timeLeft" class="form-p-addPanel"></span>
+        </div>
+
+        <div class="planeInfoPanelDiv">
+            <span class="form-label-addPanel">剩余距离：</span>
+            <span id="distanceLeft" class="form-p-addPanel"></span>
+        </div>
+
+        <div class="planeInfoPanelDiv" style="display: none">
+            <span class="form-label-addPanel">&nbsp;操&nbsp;作&nbsp;人：</span>
+            <span id="operatorName" class="form-p-addPanel"></span>
+        </div>
+    </div>
+    <button >按钮1</button>
+    <button >按钮2</button>
+    <button >按钮3</button>
+
+</div>
+<!--飞机详情div-->
+<!--style="display:none"-->
+
+<!--<script  type="text/javascript" src="https://maps.google.cn/maps/api/js?region=cn&language=zh-CN&key=AIzaSyAidzX2NactyE2j1EOxcGwDDL_OW9QBap0&callback=initialize"></script>-->
+</body>
+<script  type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/map.js"></script>
+<script type="text/javascript" src="js/layer/layer.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?region=cn&language=zh-CN&key=AIzaSyAidzX2NactyE2j1EOxcGwDDL_OW9QBap0&callback=initGoogleMap"></script>
+<script type="text/javascript" src="js/socket/reconnecting-websocket.js"></script>
+<script type="text/javascript" src="js/socket/socket.js"></script>
+<script>
+
+    $(document).ready(function(){
+        initLeftPanel();
+    });
+    function initLeftPanel()
+    {
+//        请求在线飞机列表
+//        显示飞行信息
+        showLeftInfo();
+    }
+    function showLeftInfo()
+    {
+        layer.open({
+            type: 1,
+            id:"showLeftListLayerId",
+            title: ['飞机信息','height:60px;font-size:18px;line-height:60px;font-family:"Microsoft YaHei"'],
+            shade: false,
+            shadeClose:true,
+            skin: 'layui-layer-lan', //加上边框
+            area: ['330px', '70%'],//宽高
+            content: $('#planeInfo'),
+            scrollbar: true,
+            offset: "top_right",
+            pos: [186, 20],//上边距和右边距
+            closeBtn: 1,
+            success:function(){planeListIsOpened=true;},
+            end:function(){planeListIsOpened=false;}
+        });
+    }
+    function toggleDiv()
+    {
+        $('#planeInfoPanel').toggle();
+    }
+</script>
+</html>

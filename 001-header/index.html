@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>header</title>
+    <!--响应式导航-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--基本样式-->
+    <link rel="stylesheet" href="CSS/base.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/base.css">
+    <style media="screen">
+
+
+    </style>
+</head>
+
+<body>
+
+    <!--头部导航-->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="header-center">
+            <!--header section -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a  href="index.html">
+                    <img src="img/logo.png" alt="" width="150" height="50">
+                </a>
+            </div>
+            <!-- menu section -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="#">首页</a></li>
+                    <li>
+                        <a href="#" onmousemove="displayDetail()" onmouseout="hiddenDetail()">关于</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">登录</a></li>
+                    <li><a href="#">注册</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <!--关于详细信息-->
+    <div id="aboutDetail" class="wrapper-detail" style="visibility:hidden" onmouseout="hiddenDetail()">
+        <div  class="center-block" style =  "width: 1280px; ">
+
+            <div style = "width: 200px; margin-left: 190px; margin-top: 20px; display:inline-block">
+                <div class=" wrapper-big-font">公司信息</div>
+                <!--样式-->
+                <div class="pull-down-style">
+                    <a  >公司介绍</a>
+                </div>
+                <div class="pull-down-style">
+                    <a  >服务条款</a>
+                </div>
+                <div class="pull-down-style">
+                    <a  >法律声明</a>
+                </div>
+                <div class="pull-down-style">
+                    <a  >可接受服务</a>
+                </div>
+                <div class="pull-down-style">
+                    <a  >免责声明</a>
+                </div>
+
+            </div>
+
+            <div style =  "width: 400px; margin-top: 20px; background-repeat: no-repeat;display:inline-block">
+                <!--公司信息-->
+                    <div class=" wrapper-big-font">荣誉资质</div>
+                <!--样式-->
+                    <div style="display:inline-block">
+                        <img src="img/images.jpg" alt="" width="134" height="80">
+                    </div>
+                    <div style="display:inline-block">
+                        <img src="img/images.jpg" alt="" width="134" height="80">
+                    </div>
+
+                <!--样式-->
+                    <div style="display:inline-block">
+                        <img src="img/images.jpg" alt="" width="134" height="80">
+                    </div>
+                    <div style="display:inline-block">
+                        <img src="img/images.jpg" alt="" width="134" height="80">
+                    </div>
+
+            </div>
+
+            <div style =  "width: 300px;  margin-top: 20px; background-repeat: no-repeat;display:inline-block">
+
+                <div class="pull-down-style wrapper-big-font">联系客服</div>
+                <!--样式-->
+                <div class="pull-down-style wrapper-middle-font">客户服务热线</div>
+                <div class="pull-down-style wrapper-middle-font">400-00000</div>
+                <div class="pull-down-style wrapper-middle-font">QQ客户服务热线</div>
+                <div class="pull-down-style wrapper-middle-font">公司地址</div>
+                <div class="pull-down-style wrapper-middle-font">公司地址</div>
+            </div>
+
+        </div>
+    </div>
+    <div >
+        <video  width="100%"  loop="loop" autoplay="autoplay" muted style="position: absolute;top: 50px">
+            <source src="img/apple_sing_child.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+<script>
+    function displayDetail()
+    {
+        var Div = document.getElementById('aboutDetail');
+        Div.style.visibility = "visible";
+        Div.style.opacity = 1;
+        Div.style.transition = "opacity 1s linear";
+    }
+    function hiddenDetail(e)
+    {
+        var div = document.getElementById("aboutDetail");
+        var x=event.clientX;
+        var y=event.clientY;
+        var divx1 = div.offsetLeft;
+        var divy1 = div.offsetTop;
+        var divx2 = div.offsetLeft + div.offsetWidth;
+        var divy2 = div.offsetTop + div.offsetHeight;
+
+        if( x < divx1 || x > divx2 || y < divy1 || y > divy2)
+        {
+            //如果离开，则执行。
+            div.style.visibility = "hidden";
+            div.style.opacity = 0;
+        }
+    }
+</script>
+</body>
+
+</html>

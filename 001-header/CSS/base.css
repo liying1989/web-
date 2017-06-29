@@ -1,0 +1,107 @@
+body{
+    margin: 0;
+}
+
+/*导航栏的宽度50px*/
+.header-center
+{
+    margin: 0 auto;
+    max-width: 1280px;
+    min-height: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+
+
+.navbar {
+    background-image: linear-gradient(#424F63, #424F63 60%, #424F63);
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #424F63;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
+}
+
+.navbar-default {
+    background-color: #424F63;
+    border-color: #424F63;
+}
+.navbar-nav{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+.navbar-default .navbar-nav
+{
+    /*与logo间隔20px距离*/
+    margin-left: 20px;
+   height: inherit;
+}
+ul >li{
+    height: inherit;
+}
+ul >li a{
+    height: inherit;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus ,
+.navbar-default .navbar-nav > li > a {
+    color: #FFF;
+    background-color: #424F63;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+
+    color: #FFF;
+    background-color: black;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #424F63;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #FFF;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #FFF;
+}
+
+/*关于*/
+.pull-down-style
+{
+    margin-top: 5px;
+}
+.pull-down-style a{
+    color:#808080;
+    font-size: 13px;
+}
+.pull-down-style a:hover{
+    color:#61b0ff ;
+    transition:all 500ms linear;
+    cursor:pointer ;
+}
+.wrapper-big-font{
+    font-size: 14px;
+    color:#D3D3D3;
+    font-family: 微软雅黑;
+}
+.wrapper-middle-font{
+    font-size: 13px;
+    color:#808080;
+    font-family: 微软雅黑;
+}
+.center-block
+{
+    margin: 0 auto;
+}
+.wrapper-detail{
+    position: relative;
+    top: -20px;
+    background-color: rgba(51,51,51,0.9);
+    z-index: 99;
+
+}

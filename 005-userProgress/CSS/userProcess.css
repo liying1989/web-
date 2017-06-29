@@ -1,0 +1,100 @@
+.user-progress{
+    margin: 10px;
+    position: relative;
+    float: left;
+
+}
+.progress-table>div{
+    float: left;
+    margin-left: 15px;
+}
+/*水平方向的坐标线*/
+.label_horizontal_table{
+    position: relative ;
+    margin-top: 5px;
+    list-style-type:none;
+    padding: 0;
+}
+
+.label_horizontal_table li{
+    padding-left: 15px;
+    float: left;
+    width: 18px;
+    font-size: 5px;
+    border-top:1px dotted #1e4a68;
+    text-align: center;
+}
+/*为最后一个元素添加*/
+.label_horizontal_table li:last-child{
+    padding-right: 15px;
+}
+/*垂直方向的坐标线*/
+.label_vertical_table{
+    list-style-type:none;
+    z-index:999;
+    padding: 0;
+    margin: 0;
+    width:0;
+}
+
+.label_vertical_table li
+{
+    position: relative;
+    left:100%;
+    font-size: 5px;
+    border-left:1px dotted #1e4a68;
+    height:20px;
+    width: 10px;
+    padding-top:15px;
+}
+
+.fix_IE {
+    clear: both;
+    vertical-align: top !important;;
+    /*text-align::20px !important;*/
+}
+
+.progress-container,
+.progress {
+    border-radius:10px 10px 0 0 ;
+}
+.progress-container {
+    width: 18px;
+    height: 200px;
+    border: none;
+    background: #767776;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    /*margin: 0 auto;*/
+    position: relative;
+    overflow: hidden;
+}
+
+.progress {
+    position: absolute;
+    width: inherit;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    z-index: 1;
+    bottom: 0;
+    text-align: center;
+    color: #151515;
+    font-size: 5px;
+    animation: animate-positive 2s;
+
+}
+/*.progress:after{*/
+/*content: "\f072";*/
+/*font-family: fontawesome;*/
+/*font-size: 48px;*/
+/*color: #333;*/
+/*position: absolute;*/
+/*top: 51px;*/
+/*right: 6px;*/
+/*transform: rotateZ(48deg);*/
+/*}*/
+
+@-webkit-keyframes animate-positive {
+    0% { height: 0%;}
+}
+@keyframes animate-positive {
+    0% { height:0%; }
+}
